@@ -15,3 +15,24 @@ __该文档描述了我解决一些问题的方案__
 
 `sudo chmod -x /etc/grub.d/30_uefi-firmware`
 
+### 设置主题
+解压项目中的grub_theme.zip文件，使用其中的install.sh脚本安装主题。
+
+如果没有图形界面，可以查看grub配置文件/etc/default/grub，中
+找到GRUB_TERMINAL_OUTPUT一行，取消注释，改为  `GRUB_TERMINAL_OUTPUT="gfxterm" `
+
+## rime输入法
+
+### 开启后是繁体中文
+摁下`Ctrl+~`或`f4`即可设置
+
+### 配置垂直显示(fcitx)
+运行`fcitx5-config-qt`选择附加组件，选第一个经典用户界面，里面有垂直候选界面，点击勾选
+
+### 提交预览
+如果你不希望在打字是拼音字母直接出现在输入框中，可以点击中州韵的配置，将预编辑模式改为不显示
+
+### 输入法皮肤
+可在github上自行搜索fcitx5-themes，然后按星排序
+
+本项目中提供了仿macOS Sonoma Dark主题，如果要应用它，请先解压，然后将其复制到`~/.local/share/fcitx5/themes`目录下（如果没有该目录，请创建一个）
