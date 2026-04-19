@@ -5,6 +5,22 @@ __该文档描述了我解决一些问题的方案__
 
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
+### 图形化设置界面
+
+如果不想手动更改配置文件，可以选择使用grub-customizer，但这会导致权限问题，wayland环境不允许root下运行图形化界面，需要以下配置
+
+`
+sudo pacman -S grub-customizer
+
+sudo pacman -S xorg-xhost
+
+xhost +local: root
+
+pkexec grub-customizer
+`
+
+接下来即可隐藏系统或更改名称
+
 ### 隐藏“高级设置 (Advanced options)”
 在文件/etc/default/grub中找到以下一行并取消注释：
 
@@ -20,6 +36,10 @@ __该文档描述了我解决一些问题的方案__
 
 如果没有图形界面，可以查看grub配置文件/etc/default/grub，中
 找到GRUB_TERMINAL_OUTPUT一行，取消注释，改为  `GRUB_TERMINAL_OUTPUT="gfxterm" `
+
+### 未解决的问题
+
+目前发现我的efi盘挂载到了/boot/efi下，导致/boot实际是在我的系统盘，是btfs格式，会产生松散文件，grub不支持，导致其无法保存上一次的启动项
 
 ## rime输入法
 
