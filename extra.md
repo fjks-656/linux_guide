@@ -9,7 +9,7 @@ __该文档描述了我解决一些问题的方案__
 
 如果不想手动更改配置文件，可以选择使用grub-customizer，但这会导致权限问题，wayland环境不允许root下运行图形化界面，需要以下配置
 
-`
+```
 sudo pacman -S grub-customizer
 
 sudo pacman -S xorg-xhost
@@ -17,9 +17,13 @@ sudo pacman -S xorg-xhost
 xhost +local: root
 
 pkexec grub-customizer
-`
+```
 
 接下来即可隐藏系统或更改名称
+
+### 无法记录上一次的启动项
+
+grub 无法写入btfs文件根式，将你的efi盘挂载到/boot下然后重新grub-install和grub-mkconfig即可
 
 ### 隐藏“高级设置 (Advanced options)”
 在文件/etc/default/grub中找到以下一行并取消注释：
@@ -30,6 +34,7 @@ pkexec grub-customizer
 运行命令
 
 `sudo chmod -x /etc/grub.d/30_uefi-firmware`
+
 
 ### 设置主题
 解压项目中的grub_theme.zip文件，使用其中的install.sh脚本安装主题。
@@ -59,3 +64,4 @@ pkexec grub-customizer
 
 ## 蓝牙
 搜索不到蓝牙耳机，在/etc/bluetooth/main.conf文件找到ControllerMode = dual，取消注释
+
