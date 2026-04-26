@@ -56,3 +56,6 @@ pkexec grub-customizer
 可在github上自行搜索fcitx5-themes，然后按星排序
 
 本项目中提供了仿macOS Sonoma Dark主题，如果要应用它，请先解压，然后将其复制到`~/.local/share/fcitx5/themes`目录下（如果没有该目录，请创建一个）
+
+## 蓝牙
+搜索不到蓝牙耳机，在/etc/bluetooth/main.conf文件找到ControllerMode = dual，取消注释
