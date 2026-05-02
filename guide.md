@@ -228,9 +228,10 @@ sudo pacman -S noto-fonts noto-fonts-emoji adoube-source-han-sans-cn-fonts
 
 ## 安装桌面环境和必要的软件
 ```
-sudo pacman -S --needed dms-shell-niri xwayland-satellite wget fish kitty fcitx5-im fcitx5-rime rime-ice-pinyin-git thunar flatpak firefox 
+sudo pacman -S --needed --noconfirm dms-shell-niri xwayland-satellite wget fish kitty fcitx5-im fcitx5-rime rime-ice-pinyin-git thunar flatpak firefox libreoffice-fresh obs-studio v4l2loopback-dkms 
+sudo flatpak remote-modify flathub --url=https://mirrors.sjtu.edu.cn/flathub
+yay -S visual-studio-code-bin wechat-universal-bwrap clash-verge-bin cherry-studio spark-store 
 ```
 
 
-sudo flatpak remote-modify flathub --url=https://mirrors.sjtu.edu.cn/flathub
 
