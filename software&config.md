@@ -1,11 +1,6 @@
 # 软件及配置文件
 本文档将提供一些常用的软件及他们的配置文件。
 
-## 系统后端
-1. alsa-utils？
-2. networkmanager
-3. bluez bluez-utils
-4. 
 
 ## 命令行工具
 1. wget
@@ -31,11 +26,11 @@
 1. vscode
 2. 微信
 3. obs
-4. flatpak
+4. flatpak  
 5. firefox
 6. libreoffice
 7. clash-verge
 8. cherry-studio
-9. 
+9. spark-store
 
 ## 其他
